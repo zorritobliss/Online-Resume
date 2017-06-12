@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Jose's Resume</title>
+    <!--CSS-->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/me.JPG" type="image/x-png">
+    <!--bootstrap style and CSS for Education and language icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!--JS-->
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <!--Chart Skill -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <!--Google Maps-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+</head>
+<body>
+      <div id="main">
+          <!--Header Information: name, role and welcome message-->
+          <div id="header" class="center-content">
+              <!--Top Contact Information: phone, email-->
+              <ul id="topContacts" class='flex-box'></ul>
+          </div>
+          <div style='clear: both;'></div>
+          <nav id="nav" class="nav">
+              <ul>
+                  <!-- Personal information: Name, skills, -->
+                  <li id="personal-nav" class="li-nav">
+                      <a href="#main" class="a-nav">Bio</a>
+                  </li>
+                  <!--Education Information: list of education and online courses-->
+                  <li id="education-nav" class="li-nav">
+                      <a href="#education" class="a-nav"> Education</a>
+                  </li>
+                  <!-- work information: list of jobs -->
+                  <li id="workExperience-nav" class="li-nav">
+                       <a href="#workExperience" class="a-nav"> Professional life</a>
+                  </li>
+                  <!--Project Information: list of projects -->
+                  <li id="projects-nav" class="li-nav">
+                      <a href="#projects" class="a-nav"> Projects</a>
+                  </li>
+                  <!-- Skill information: list of skill -->
+                  <li id="skillsChart-nav" class="li-nav">
+                       <a href="#skillsChart" class="a-nav"> Skills</a>
+                  </li>
+                  <!-- Navigation information: to navigate to page -->
+                  <li id="map-Div-nav" class="li-nav">
+                       <a href="#mapDiv" class="a-nav"> Places</a>
+                  </li>
+                  <!-- footer information: contact information. -->
+                  <li id="footerContacts-div-nav" class="li-nav">
+                      <a href="#footerContacts" class="a-nav"> Let's Connect</a>
+
+              </ul>
+          </nav>
+          <div id="workExperience" class='gray'>
+              <h2>Work Experience</h2>
+          </div>
+          <div id="projects">
+               <h2>Projects</h2>
+          </div>
+          <div id="education" class='gray'>
+               <h2><span class="glyphicon glyphicon-book"></span>Education</h2>
+          </div>
+        <!--Languages Info-->
+              <h2><span class="glyphicon glyphicon-globe"></span>Languages</h2>
+              <h3>Spanish</h3>
+              <h3>English</h3>
+          </div>
+              <!--Awards Info-->
+              <h2><span class="glyphicon glyphicon-star"></span>Awards</h2>
+              <h3>Five times Presidents Council Award (2002,2003,2004,2005,2006)</h3>
+              <h3> Two times Leadership Council Award (2007,2008)</h3>
+              <h3>Six  times $300,000 Club awar </h3>
+              <h3>Two Six Figure Club Award </h3>
+              <h3> Two times Top Sprint  PCS Sales Award in the Region </h3>
+              <h3>Top Sprint PCS Sales Award in the Country </h3>
+              <h3> Spirit Award </h3>
+          <div id="skillsChart">
+               <h2>Skills Chart</h2>
+          <div id="container" style="min-width: 310px; height: 400px; max-width: 1200px; margin: 0 auto"></div>
+          </div>
+          <div id="mapDiv">
+               <h2>Where I've Lived and Worked</h2>
+          </div>
+          <div id="letsConnect" class='dark-gray'>
+               <h2 class='orange center-text'>Let's Connect</h2>
+           <ul id="footerContacts" class="flex-box">
+        </ul>
+      </div>
+      <script src="js/resumeBuilder.js"></script>
+
+      <script type="text/javascript">
+        if(document.getElementsByClassName("flex-item").length === 0) {
+            document.getElementById("topContacts").style.backgroundColor = "black";
+        }
+        if(document.getElementsByTagName("h1").length === 0) {
+            document.getElementById("header").style.backgroundColor = "black";
+        }
+        if(document.getElementsByClassName("work-entry").length === 0) {
+            document.getElementById("workExperience").style.backgroundColor = "black";
+        }
+        if(document.getElementsByClassName("project-entry").length === 0) {
+            document.getElementById("projects").style.backgroundColor = "black";
+        }
+        if(document.getElementsByClassName("education-entry").length === 0) {
+            document.getElementById("education").style.backgroundColor = "black";
+        }
+        //    if(document.getElementsByClassName("skills-entry").length === 0) {
+        //      document.getElementById("skillsChart").style.backgroundColor = "black";
+        //    }
+        if(document.getElementsByClassName("flex-item").length === 0) {
+            document.getElementById("letsConnect").style.backgroundColor = "black";
+        }
+        if(document.getElementById("map") == undefined) {
+            document.getElementById("mapDiv").style.display = "none";
+        }
+      </script>
+</body>
+</html>
